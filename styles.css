@@ -1,0 +1,128 @@
+
+/*-- Basic Items --*/
+:root {
+	--color-pink: #bf3372;
+	--color-primary: #e9acbd;
+	--color-secondary: #aa3c83;
+	--color-yellow: #d3cb97;
+	--color-bodyText: #585a5a;
+	--color-footer: #df23b3;
+	--font-body-text: 1.25em;
+	
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Sans-Serif', sans-serif;
+	margin: 0;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+	font-size: 1.25em;
+}
+h5 {
+	font-size: 0.8em;
+}
+
+
+a {
+	color: var(--color-primary);
+	font-weight: none;
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--color-pink);
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+}
+
+
+.button {
+	border-radius: 10px;
+	background-color: var(--color-primary);
+	color: var(--color-pink);
+	text-align: center;
+	padding: 0.6em 2em;
+}
+
+.button:hover {
+	opacity: 0.8;
+	background-color: var(--color-primary-lowOpacity);
+}
+
+.button > a {
+	color: var(--color-pink);
+}
+
+/*-- Header --*/
+
+header {
+	display: flex;
+	margin: 0 auto;
+	padding: 3em;
+	position: relative;
+}
+
+header > svg {
+	width: 60px;
+	height: 60px;
+}
+
+header .nav-col,
+header .nav-col {
+	width: 50%;
+}
+
+/*-- About page --*/
+.about-cont {
+	margin-top: 3em;
+}
+.about-cont cv.pdf {
+	background-color: var(--color-primary);
+	border-radius: 5px;
+	padding: 1em;
+	text-align: center;
+	margin-top: 0.5em;
+}
+.about-cont .resume-btn a {
+	color: var(--color-pink);
+}
+.about-col {
+	padding-right: 2em;
+}
+.about-col ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+}
+.about-col li {
+	padding: 0 1em 0.5em 0;
+}
+
+
+
+
+
+
+
+
+
