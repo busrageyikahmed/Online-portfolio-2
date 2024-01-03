@@ -1,3 +1,9 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 /*-- Basic Items --*/
 :root {
 	--color-pink: #bf3372;
@@ -9,35 +15,44 @@
 	--font-body-text: 1.25em;	
 }
 
+/* Header Styling */
+header {
+	background-color: var(--color-primary); /* Background color for the header */
+	color: var(--color-pink); /* Text color */
+	padding: 20px; /* Padding around the header content */
+}
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+/* Navigation Styling */
+nav ul {
+	list-style: none; /* Remove default list styles */
+	padding: 0; /* Remove default padding */
+	display: flex; /* Arrange navigation links in a row */
+	justify-content: space-between; /* Distribute navigation links evenly */
+	align-items: center; /* Align navigation links vertically */
+}
+
+nav ul li {
+	margin-right: 20px; /* Spacing between navigation links */
+}
+
+nav ul li a {
+	text-decoration: none; /* Remove underline from links */
+	color: var(--color-pink); 
+}
+
+nav ul li a:hover {
+	color: var(--color-secondary); 
+}
+
+
+h1, h2, h3, h4, h5 {
 	font-family: 'Sans-Serif', sans-serif;
 	margin: 0;
 }
 
-h1 {
-	font-size: 2.5em;
-}
-h2 {
-	font-size: 2em;
-}
-h3 {
-	font-size: 1.5em;
-}
-h4 {
-	font-size: 1.25em;
-}
-h5 {
-	font-size: 0.8em;
-}
-
 a {
 	color: var(--color-primary);
-	font-weight: normal; /* Changed 'none' to 'normal' */
+	font-weight: normal;
 	text-decoration: none;
 }
 
@@ -67,7 +82,7 @@ img {
 	color: var(--color-pink);
 }
 
-/*-- Header --*/
+/* Header-specific styles */
 header {
 	display: flex;
 	margin: 0 auto;
@@ -85,12 +100,11 @@ header .nav-col {
 	width: 50%;
 }
 
-/*-- About page --*/
+/* About page styles */
 .about-cont {
 	margin-top: 3em;
 }
 
-/* Added .resume-btn class for CV link/button styling */
 .about-cont .resume-btn {
 	background-color: var(--color-primary);
 	border-radius: 5px;
@@ -118,8 +132,89 @@ header .nav-col {
 	padding: 0 1em 0.5em 0;
 }
 
-
+/* Set image width to 100% */
 img {
-    width: 100%;
+	width: 100%;
 }
 
+/* Hero Section Styling */
+.hero-section {
+    background-size: cover; 
+    background-position: center; 
+    text-align: center;
+    padding: 100px 20px; 
+    color: rgb(36, 33, 33);
+}
+
+.hero-section h1 {
+    font-size: 3em; 
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.5em; 
+    margin-bottom: 30px;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+/* Work section styles */
+.projects {
+    padding: 20px; /* Add some padding to the main section */
+}
+
+.project {
+    background-color: var(--color-secondary); 
+    color: rgb(154, 100, 149);
+    padding: 20px; 
+    margin-bottom: 20px; 
+}
+
+.project h2 {
+    font-size: 1.5em; 
+    margin-bottom: 10px; 
+}
+
+.project img {
+    width: 100%; 
+    margin-bottom: 10px; 
+}
+
+.project p {
+    font-size: 1em; 
+    margin-bottom: 10px; 
+}
+
+.project a {
+    color: rgb(227, 181, 181); 
+    text-decoration: none; 
+    font-weight: bold; 
+    display: inline-block; 
+    padding: 5px 10px; 
+    border: 1px solid white; 
+    transition: all 0.3s ease;
+}
+
+.project a:hover {
+    background-color: rgb(255, 157, 235);
+    color: var(--color-secondary); 
+}
+
+/* Footer styles in the contact section */
+.contact-footer {
+    background-color: #ffb1f1; 
+    color: #333; 
+    text-align: center; 
+    padding: 20px; 
+}
