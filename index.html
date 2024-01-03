@@ -2,33 +2,58 @@
 <html>
 <head>
     <title>Busra Geyik - UX/UI Designer</title>
-
     <link rel="stylesheet" type="text/css" href="#styles.css">
+    <style>
+        body {
+            text-align: center; /* Aligns text to center */
+        }
+        /* Aligns specific elements */
+        header nav {
+            text-align: left; /* Aligns navigation to the left */
+        }
+        header nav ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        .row {
+            text-align: left; /* Aligns row content to the left */
+        }
+        footer {
+            text-align: center; /* Aligns footer text to center */
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>    
-        <div>
-            <img src="path/to/your/image.jpg" alt="Picture logo">
-            <nav>
-                <ul>
-                    <li><a href="work.html">Work</a></li>
+            <div class="container">
+                <img src="path/to/your/image.jpg" alt="Picture logo">
+                <nav>
+                    <ul class="row">
+                        <li><a href="work.html">Work</a></li>
                         <li><a href="aboutme.html">About</a></li>
-                     <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
     </header>
-    <section id="home">
-    </section>
-    <h1>Busra Geyik</h1>
-    <h2>UX/UI Designer</h2>
-    <h3>Based in the lively city of London. 
-        I spealise in UX/UI design, graphic design, and front-end development, 
-        brining a modern touch on your digital needs!
-    </h3>
-   
 
-<footer>
-    <p>&copy;2023 Busra Geyik. All rights reserved</p>
-</footer>
+    <section id="home" class="container">
+        <div class="row">
+            <h1>Busra Geyik</h1>
+            <h2>UX/UI Designer</h2>
+            <h3>Based in the lively city of London. 
+                I specialize in UX/UI design, graphic design, and front-end development, 
+                bringing a modern touch to your digital needs!
+            </h3>
+        </div>
+    </section>
+
+    <footer class="container">
+        <div class="row">
+            <p>&copy;2023 Busra Geyik. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

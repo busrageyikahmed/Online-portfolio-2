@@ -2,13 +2,41 @@
 <html>
 <head>
     <title>Contact Me</title>
-    <link rel="stylesheet" type="text/css" href="#styles.css">
+    <style>
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-footer {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <header>
-    
-        <nav>
-            <ul>
+    <header class="container">
+        <nav class="row">
+            <ul class="container row">
                 <li><a href="#work">Work</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -16,32 +44,37 @@
         </nav>
     </header>
 
-    <main>
-        <section id="contact">
-            <h1>Contact Me</h1>
-            <p>Feel free to reach out to me!:</p>
+    <main class="container">
+        <section class="row">
+            <div class="container">
+                <h1>Contact Me</h1>
+                <p>Feel free to reach out to me!</p>
         
-            <p>Email: busrageyik1999@gmail.com</p>
-            <p>Phone: +1234567890</p>
+                <p>Email: busrageyik1999@gmail.com</p>
+                <p>Phone: +1234567890</p>
+                
+                <h2>Send me a message</h2>
             
-            <h2>Send me a message</h2>
-        
-            <form action="mailto:busrageyik1999@gmail.com" method="post" enctype="text/plain">
-                <label for="message">Your Message:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
-                <input type="submit" value="Send">
-            </form>
-            
-            
-            <h2>Message for You</h2>
-            <p>Hello and welcome! We're delighted you've stopped by. 
-                Got a question, a thought, or simply want to say hi? We're all ears and ready to connect.
-                Your message brightens our day, so don't hesitate to reach out. Let's start a conversation!</p>
+                <form action="mailto:busrageyik1999@gmail.com" method="post" enctype="text/plain">
+                    <label for="message">Your Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                    <input type="submit" value="Send">
+                </form>
+                
+                <h2>Message for You</h2>
+                <p>Hello and welcome! We're delighted you've stopped by. 
+                    Got a question, a thought, or simply want to say hi? We're all ears and ready to connect.
+                    Your message brightens our day, so don't hesitate to reach out. Let's start a conversation!</p>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy;2023 Busra Geyik. All rights reserved.</p>
+    <footer class="container">
+        <div class="row">
+            <footer class="contact-footer">
+                <p>&copy;2023 Busra Geyik. All rights reserved.</p>
+            </footer>
+        </div>
     </footer>
 </body>
 </html>
