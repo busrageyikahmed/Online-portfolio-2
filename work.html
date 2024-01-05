@@ -3,12 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Work</title>
-  <link rel="css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="#styles.css">
+  <style>
+    
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      
+    }
+
+    /* Align text */
+    h1, h2, p {
+      text-align: center; /* Align text to center */
+    }
+
+    footer {
+      text-align: center; /* Align footer text to center */
+    }
+  </style>
 </head>
 <body>
-  <header>
+  <header class="container">
     <h1>My Portfolio</h1>
-    <nav>
+    <nav class="row">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="work.html">Work</a></li>
@@ -17,23 +40,37 @@
     </nav>
   </header>
 
-  <main class="projects">
-    <section class="project">
-      <h2>Nefes & Co</h2>
-      <img src="img/appimage.png" alt="Project 1 Image">
-      <p>Nefes is our personalised meal app, designed to make meal planning easier, 
-        enhance your culinary knowledge, and cater to your individual tastes and dietary preferences.
-      <a href="nefes&co.html">View Project</a>
-      </p>
+  <main class="container">
+    <section class="row project">
+      <div class="container">
+        <h2>Nefes & Co</h2>
+        <img src="img/appimage.png" alt="Project 1 Image">
+        <p>Nefes is our personalised meal app, designed to make meal planning easier, 
+          enhance your culinary knowledge, and cater to your individual tastes and dietary preferences.
+          <a href="nefes&co.html">View Project</a>
+        </p>
+      </div>
     </section>
-
-
   </main>
 
+
+
+
+  <main class="container">
+    <section class="row project">
+      <div class="container">
+        <h2>UXR</h2>
+        <img src="" alt="">
+        <p>We're currently immersed in a dynamic project centered around User Experience Research (UXR). 
+          This initiative focuses on comprehensively understanding how users engage with our product or service. We're actively conducting surveys, interviews, and usability tests to gather invaluable insights. These findings will steer our design and development efforts, aiming to craft an intuitive and user-friendly experience for our audience.
+           It's an ongoing journey aimed at enhancing our product through user-centric insights and improvements.
+          <a href="uxr.html">View Project</a>
+        </p>
+      </div>
+    </section>
+  </main>
   <footer>
     <p>&copy; 2023 Busra Geyik</p>
   </footer>
 </body>
 </html>
-
-
