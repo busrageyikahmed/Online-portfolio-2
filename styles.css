@@ -1,220 +1,147 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-/*-- Basic Items --*/
+/* Variable Declarations */
 :root {
-	--color-pink: #bf3372;
-	--color-primary: #e9acbd;
-	--color-secondary: #aa3c83;
-	--color-yellow: #d3cb97;
-	--color-bodyText: #585a5a;
-	--color-footer: #df23b3;
-	--font-body-text: 1.25em;	
+    --color-pink: #bf3372;
+    --color-primary: #e9acbd;
+    --color-secondary: #aa3c83;
+    --color-yellow: #d3cb97;
+    --color-bodyText: #585a5a;
+    --color-footer: #df23b3;
+    --font-body-text: 1.25em;
 }
 
-/* Header Styling */
-header {
-	background-color: var(--color-primary); /* Background color for the header */
-	color: var(--color-pink); /* Text color */
-	padding: 20px; /* Padding around the header content */
+/* Global Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease; 
 }
 
-/* Navigation Styling */
-nav ul {
-	list-style: none; /* Remove default list styles */
-	padding: 0; /* Remove default padding */
-	display: flex; /* Arrange navigation links in a row */
-	justify-content: space-between; /* Distribute navigation links evenly */
-	align-items: center; /* Align navigation links vertically */
+/* Body Styles */
+body {
+    font-size: var(--font-body-text);
+    background-color: aliceblue;
 }
 
-nav ul li {
-	margin-right: 20px; /* Spacing between navigation links */
-}
-
-nav ul li a {
-	text-decoration: none; /* Remove underline from links */
-	color: var(--color-pink); 
-}
-
-nav ul li a:hover {
-	color: var(--color-secondary); 
-}
-
-
+/* Typography */
 h1, h2, h3, h4, h5 {
-	font-family: 'Sans-Serif', sans-serif;
-	margin: 0;
+    font-family: 'Sans-Serif', sans-serif;
+    margin: 0;
+    transition: color 0.3s ease; 
 }
 
+/* Links and Buttons */
 a {
-	color: var(--color-primary);
-	font-weight: normal;
-	text-decoration: none;
+    color: var(--color-primary);
+    font-weight: normal;
+    text-decoration: none;
+    transition: color 0.3s ease; 
 }
 
 a:hover {
-	color: var(--color-pink);
-	text-decoration: none;
-}
-
-img {
-	width: 100%;
+    color: var(--color-pink);
+    text-decoration: none;
 }
 
 .button {
-	border-radius: 10px;
-	background-color: var(--color-primary);
-	color: var(--color-pink);
-	text-align: center;
-	padding: 0.6em 2em;
+    border-radius: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-pink);
+    text-align: center;
+    padding: 0.6em 2em;
+    transition: all 0.3s ease; 
 }
 
 .button:hover {
-	opacity: 0.8;
-	background-color: var(--color-primary-lowOpacity);
+    opacity: 0.8;
+    background-color: var(--color-primary-lowOpacity);
 }
 
 .button > a {
-	color: var(--color-pink);
+    color: var(--color-pink);
 }
 
-/* Header-specific styles */
+/* Layouts */
+.container {
+    padding: 0 15px;
+    display: flex; 
+    transition: background-color 0.3s ease; 
+}
+
+/* Header Styles */
 header {
-	display: flex;
-	margin: 0 auto;
-	padding: 3em;
-	position: relative;
+    background-color: var(--color-primary);
+    color: var(--color-pink);
+    padding: 20px;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
 }
 
 header > svg {
-	width: 60px;
-	height: 60px;
+    width: 60px;
+    height: 60px;
 }
 
-header .nav-col,
-header .nav-col {
-	width: 50%;
+/* Main Content Styles */
+main {
+    flex: 1; 
+    padding: 20px;
 }
 
-/* About page styles */
-.about-cont {
-	margin-top: 3em;
-}
-
-.about-cont .resume-btn {
-	background-color: var(--color-primary);
-	border-radius: 5px;
-	padding: 1em;
-	text-align: center;
-	margin-top: 0.5em;
-}
-
-.about-cont .resume-btn a {
-	color: var(--color-pink);
-}
-
-.about-col {
-	padding-right: 2em;
-}
-
-.about-col ul {
-	list-style: none;
-	display: flex;
-	flex-wrap: wrap;
-	padding: 0;
-}
-
-.about-col li {
-	padding: 0 1em 0.5em 0;
-}
-
-/* Set image width to 100% */
-img {
-	width: 100%;
-}
-
-/* Hero Section Styling */
-.hero-section {
-    background-size: cover; 
-    background-position: center; 
-    text-align: center;
-    padding: 100px 20px; 
-    color: rgb(36, 33, 33);
-}
-
-.hero-section h1 {
-    font-size: 3em; 
-    margin-bottom: 20px;
-}
-
-.hero-section p {
-    font-size: 1.5em; 
-    margin-bottom: 30px;
-}
-
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    
-}
-
-/* Work section styles */
-.projects {
-    padding: 20px; /* Add some padding to the main section */
-}
-
-.project {
-    background-color: var(--color-secondary); 
-    color: rgb(154, 100, 149);
+aside {
+    flex: 0 0 40%; 
     padding: 20px; 
-    margin-bottom: 20px; 
+    background-color: lightgray; 
 }
 
-.project h2 {
-    font-size: 1.5em; 
-    margin-bottom: 10px; 
+/* Media Queries */
+@media only screen and (min-width: 640px) {
+    .container {
+        padding: 0 0px;
+    }
+
+    header {
+        padding: 30px; 
+
+    main {
+        
+        font-size: 1.5em; 
+    }
+
+    aside {
+        flex: 0 0 40%; 
+        font-size: 1.2em; 
+    }
 }
 
-.project img {
-    width: 100%; 
-    margin-bottom: 10px; 
+@media only screen and (min-width: 1024px) {
+    .container {
+        max-width: 960px; 
+    }
+
+    header {
+        display: flex; 
+    }
+
+    main {
+        
+        margin-right: 20px; 
+    }
+
+    aside {
+        flex: 0 0 40%; 
+        margin-left: 20px; 
+    }
+
+/* the animation */
+@keyframes move {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(50px); }
+    100% { transform: translateX(0); }
 }
 
-.project p {
-    font-size: 1em; 
-    margin-bottom: 10px; 
-}
-
-.project a {
-    color: rgb(227, 181, 181); 
-    text-decoration: none; 
-    font-weight: bold; 
-    display: inline-block; 
-    padding: 5px 10px; 
-    border: 1px solid white; 
-    transition: all 0.3s ease;
-}
-
-.project a:hover {
-    background-color: rgb(255, 157, 235);
-    color: var(--color-secondary); 
-}
-
-/* Footer styles in the contact section */
-.contact-footer {
-    background-color: #ffb1f1; 
-    color: #333; 
-    text-align: center; 
-    padding: 20px; 
+/* Apply the animation to the SVG element */
+svg {
+    animation: move 2s infinite; 
 }
